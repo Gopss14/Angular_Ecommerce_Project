@@ -1,5 +1,14 @@
 <h1>Student Registration</h1>
 
+<h4>Search Student</h4>
+
+<input
+  type="text"
+  placeholder="Search by name"
+  [(ngModel)]="searchText">
+
+<br><br>  
+
 <label>Name:</label>
 <br>
 <input type="text" [(ngModel)]="name">
@@ -39,8 +48,8 @@
     <th>Action</th>
  </tr>
 
- <tr *ngFor="let student of students; let i = index">
-    <td>{{student.name}}</td>
+ <tr *ngFor="let student of getFilteredStudents(); let i = index">
+    <td>{{student.name | titlecase}}</td>
     <td>{{student.age}}</td>
     <td>{{student.department}}</td>
     <td>{{student.email}}</td>

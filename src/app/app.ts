@@ -18,6 +18,7 @@ export class App {
   email: string ='';
   students: Student[] = [];
   selectedIndex: number = -1;
+  searchText = '';
 
   addStudent(){
 
@@ -54,5 +55,12 @@ export class App {
     this.department = student.department;
     this.email = student.email;
     this.selectedIndex = index;
+  }
+
+  getFilteredStudents() : Student[] {
+    if(this.searchText.trim() === ''){
+      return this.students;
+    }
+    return this.students.filter(student => student.name.toLowerCase().includes(this.searchText.toLowerCase()));
   }
 }

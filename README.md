@@ -1,3 +1,3 @@
-# Angular_Ecommerce_Project
+# Angular_Student_Registration_System_Project
 
-Angular Ecommerce Project built with Angular.
+Angular Student_Registration_System Project built with Angular.

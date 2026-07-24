@@ -1,0 +1,41 @@
+<h2>Student Form</h2>
+
+<label>Name:</label>
+<br>
+<input type="text" [(ngModel)]="name">
+
+<br><br>
+
+<label>Age:</label>
+<br>
+<input type="number" [(ngModel)]="age">
+
+<br><br>
+
+<label>Department:</label>
+<br>
+<input type="text" [(ngModel)]="department">
+
+<br><br>
+
+<label>Email:</label>
+<br>
+<input type="email" [(ngModel)]="email">
+
+<br><br>
+<!-- 
+<button (click) = "addStudent()"> {{selectedIndex === -1 ? 'Add Student' : 'Update Student'}}</button>  -->
+
+<button (click)="saveStudent()">
+  {{ isEditMode ? 'Update Student' : 'Add Student' }}
+</button>
+
+<!-- <h2>{{title}}</h2> -->
+<!-- 
+<h2>Child Component</h2>
+
+<button (click)="increase()">
+
+Increment
+
+</button> -->
